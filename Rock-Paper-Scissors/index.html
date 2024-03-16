@@ -1,0 +1,96 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+    <head> 
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+        <link rel="icon" type="image/x-icon" href="img/favicon.svg"/>
+        <title>Rock-Paper-Scissors</title>         
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:600,700&display=swap">
+    </head>     
+    <body>
+        <main>
+            <!-- Game Bar Section -->
+            <div class="game-bar">
+                <!-- Game List -->
+                <div class="score">
+                    <span>Player</span>
+                    <div id="player-points" class="points">0</div>
+                </div>
+                <ul class="game-list">
+                    <li>Rock</li>
+                    <li>Paper</li>
+                    <li>Scissors</li>
+                    <li>Lizard</li>
+                    <li>Spock</li>
+                </ul>
+                <!-- Score Display -->
+                <div class="score">
+                    <span>Computer</span>
+                    <div id="computer-points" class="points">0</div>
+                </div>
+            </div>
+            <!-- Game Play Section -->
+            <div class="game-play">
+                <!-- Background Pentagon -->
+                <div class="bg-pentagon">
+                    <!-- Play Buttons -->
+                    <button id="scissors" class="play-btn scissors" title="scissors">
+                        <img src="img/icon-scissors.svg" alt="scissors">
+                    </button>
+                    <button id="paper" class="paper play-btn" title="paper">
+                        <img src="img/icon-paper.svg" alt="paper">
+                    </button>
+                    <button id="rock" class="play-btn rock" title="rock">
+                        <img src="img/icon-rock.svg" alt="rock">
+                    </button>
+                    <button id="lizard" class="lizard play-btn" title="lizard">
+                        <img src="img/icon-lizard.svg" alt="lizard">
+                    </button>
+                    <button id="spock" class="play-btn spock" title="spock">
+                        <img src="img/icon-spock.svg" alt="spock">
+                    </button>
+                </div>
+                <div class="view-play">
+                    <div class="player">
+                        <span>You Picked</span>
+                        <!-- Player -->
+                        <div id="player" class="player-picked"></div>
+                    </div>
+                    <div class="computer">
+                        <!-- Computer -->
+                        <span>Computer Picked</span>
+                        <div id="computer" class="computer-picked"></div>
+                    </div>
+                    <div id="view-result" class="view-result">
+                        <span id="result"></span>
+                        <button id="playagin" title="Play game again">Play Again</button>
+                    </div>
+                </div>
+            </div>
+            <div id="view-rules" class="view-rules">
+                <div class="control"><span>Rules</span>
+                    <button id="close" class="close" title="Close this window">
+                        <img alt="close" src="img/icon-close.svg">
+                    </button>                     
+                </div>                 
+                <img src="img/image-rules-bonus.svg" alt="image rules">
+                <button id="mobile-close" class="close" title="Close this window">
+                    <img alt="close" src="img/icon-close.svg">
+                </button>
+            </div>
+            <!-- Rules Button -->
+            <button id="rules" class="rules" title="Close this window">Rules</button>
+            <audio id="themeSong" src="theme%20song/yt1s.com%20-%20Temple%20Run%20iOS%20Music%20Running%20Music.mp3" volume="1" loop="true" autoplay="true">Your browser doesn't support HTML5 audio tag.</audio>
+        </main>
+        <!-- Loading Screen-->
+        <div id="loading-screen" class="loading-screen">
+            <div class="loader-wrapper">
+                <img src="img/icon-rock.svg" alt="rock2">
+                <img src="img/icon-paper.svg" alt="paper">
+                <img src="img/icon-scissors.svg" alt="scissors">
+            </div>
+        </div>         
+        <script defer src="script.js"></script>         
+    </body>
+</html>

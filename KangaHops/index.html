@@ -1,0 +1,43 @@
+<!DOCTYPE html> 
+<html lang="en" onclick="hops()"> 
+    <head> 
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" type="image/x-icon" href="media/favicon.svg"/>
+        <title>KangaHops</title>         
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aclonica:400&display=swap">
+    </head>     
+    <body>
+        <main>
+            <div class="illusion">
+                <div class="cloud"></div>
+                <div class="cloud"></div>
+                <div class="cloud"></div>
+                <div class="result">
+                    <div class="score">
+                        <img src="media/cred-svgrepo-com.svg">
+                        <span id="scorer"></span>
+                    </div>
+                    <div class="time">
+                        <img src="media/timer-stopwatch-svgrepo-com.svg"><span id="timer"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="foreground">
+                <div id="game" class="game">
+                    <div id="character" class="character">
+                        <img src="media/kangaroo-svgrepo-com.svg">
+                    </div>
+                    <div id="obstacles" class="obstacles">
+                        <img id="rollingfire" src="media/rolling-energy-svgrepo-com.svg">
+                        <img id="koala" src="media/koala-svgrepo-com.svg">
+                        <img id="cactus" src="media/cactus-svgrepo-com%20(1).svg">
+                    </div>
+                </div>
+                <div class="moving-ground"></div>
+            </div>
+        </main>
+        <script src="script.js"></script>
+    </body>     
+</html>

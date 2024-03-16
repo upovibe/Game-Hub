@@ -1,0 +1,250 @@
+/* General CSS Reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+:root {
+    /* ### Primary */
+    --primary: #BF9B5F;
+    --secondary: #65513C;
+    --ash: #FF9C9F;
+    --brown: #333E48;
+    --LB: #9C7F4D;
+}
+
+body {
+    background-image: url('media/background2.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    overflow-x: hidden;
+    height: 100vh;
+    width: 100%;
+    font-family: 'Aclonica', sans-serif;
+    font-size: 2rem;
+}
+
+main {
+    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+img {
+    display: block;
+    margin: 0, auto;
+    height: auto;
+    width: 100%;
+}
+
+.illusion {
+    width: 100%;
+    height: 50%;
+    background-color: transparent;
+    position: relative;
+}
+
+.cloud {
+    height: 15px;
+    max-width: 200px;
+    width: 100%;
+    max-width: 200px;
+    background-color: var(--ash);
+    border-radius: 100%;
+    position: absolute;
+}
+
+.cloud:nth-of-type(1) {
+    top: 20vh;
+    animation: move-clouds 1s infinite linear;
+    right: 50px;
+}
+
+.cloud:nth-of-type(2) {
+    top: 3vh;
+    right: 20px;
+    animation: move-clouds 2s infinite linear;
+}
+
+.cloud:nth-of-type(3) {
+    top: 60vh;
+    right: -100px;
+    animation: move-clouds 3s infinite linear;
+}
+
+@keyframes move-clouds{
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100vw);
+    }
+}
+
+.foreground {
+    width: 100%;
+    height: 50%;
+    background-color: transparent;
+    padding: 1rem 1rem 0.01rem;
+    border-bottom: 10px solid #65513C;
+    position: relative;
+}
+
+.moving-ground {
+    width: 100%;
+    background-color: var(--secondary);
+    left: 0px;
+    animation: move 5s infinite linear;
+    transition: all ease;
+    max-width: 10px;
+    height: 5px;
+    border-radius: 50% 50% 0 0;
+    position: absolute;
+    bottom: 0px;
+}
+
+@keyframes move{
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(100vw);
+    }
+}
+
+.game {
+    height: 100%;
+    position: relative;
+}
+
+.character {
+    width: fit;
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 50vw;
+    animation: movefront 0.3s linear;
+}
+/* 
+@keyframes movefront{
+    from{
+        left: 0px;
+    }
+
+    to{
+        left:30px;
+    }
+} */
+
+.hop {
+    animation: hops 0.5s ease-in-out;
+}
+
+@keyframes hops{
+    0% { 
+        bottom: 0px;
+    }
+
+    50% {
+        bottom: 150px;
+    }
+
+    55% {
+        bottom: 150px;
+    }
+
+    100% {
+        bottom: 0px;
+    }
+}
+
+.character> img {
+    max-width: 5rem;
+}
+
+.obstacles {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    bottom: 0;
+    animation: move-left 3s infinite linear;
+}
+
+@keyframes move-left {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100vw);
+    }
+}
+
+.obstacles > img:nth-of-type(1) {
+    max-width: 2rem;
+    position: absolute;
+}
+
+.obstacles > img:nth-of-type(2) {
+    max-width: 3rem;
+    position: absolute;
+}
+
+.obstacles > img:nth-of-type(3) {
+    max-width: 3rem;
+}
+
+.result {
+    width: 100%;
+    height: 100px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+    gap: 3rem;
+    position: absolute;
+    top: 0;
+}
+
+.score,
+.time {
+    width: 100%;
+    height: 100%;
+    background-color: var(--ash);
+    border-radius: 50px;
+    display: flex;
+    padding: 10px;
+    box-shadow: 0px 5px 39px rgba(0, 0, 0, 0.15);
+    align-items: center;
+    gap: 10px;
+    color: var(--brown);
+    overflow: hidden;
+}
+
+.score > img,
+.time> img {
+    max-width: 50px;
+}
+
+.score > span,
+.time>span {
+    height: 50px;
+    line-height: 50px;
+}
