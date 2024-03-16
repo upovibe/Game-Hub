@@ -27,7 +27,6 @@ body {
     height: 100vh;
     width: 100%;
     font-family: 'Aclonica', sans-serif;
-    font-size: 2rem;
 }
 
 main {
@@ -38,6 +37,7 @@ main {
     justify-content: space-between;
     flex-direction: column;
     min-height: 100vh;
+    position: relative;
 }
 
 img {
@@ -144,7 +144,7 @@ img {
 }
 
 @keyframes hops{
-    0% { 
+    0% {
         bottom: 0px;
     }
 
@@ -188,40 +188,51 @@ img {
 }
 
 .result {
-    width: 100%;
-    height: 100px;
+    width: 100vw;
     padding: 1rem;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    align-content: center;
-    gap: 3rem;
     position: absolute;
     top: 0;
+    flex-direction: column;
+    gap: 5px;
 }
 
 .score,
 .time {
     width: 100%;
-    height: 100%;
-    background-color: var(--ash);
+    background-color: rgba(0, 0, 0, 0.47);
     border-radius: 50px;
     display: flex;
-    padding: 10px;
+    padding: 5px;
     box-shadow: 0px 5px 39px rgba(0, 0, 0, 0.15);
     align-items: center;
-    gap: 10px;
-    color: var(--ash);
+    gap: 5px;
+    color: white;
     overflow: hidden;
+    max-height: 40px;
+    max-width: 10rem;
+    font-size: 1rem;
 }
 
 .score > img,
 .time> img {
-    max-width: 50px;
+    max-width: 30px;
 }
 
 .score > span,
 .time > span {
     height: 50px;
     line-height: 50px;
+}
+
+.count-down {
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Aclonica', sans-serif;
+    color: white;
+    font-size: 5rem;
+    filter: drop-shadow(0px 15px 50px rgba(0, 0, 0, 0.36));
 }
