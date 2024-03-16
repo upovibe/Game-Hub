@@ -116,11 +116,11 @@ img {
 
 @keyframes move{
     from {
-        transform: translateX(0);
+        transform: translateX(100vw);
     }
 
     to {
-        transform: translateX(100vw);
+        transform: translateX(0);
     }
 }
 
@@ -130,24 +130,14 @@ img {
 }
 
 .character {
-    width: fit;
+    width: auto;
     cursor: pointer;
     position: absolute;
     z-index: 1;
     bottom: 0;
-    left: 50vw;
+    left: 30vw;
     animation: movefront 0.3s linear;
 }
-/* 
-@keyframes movefront{
-    from{
-        left: 0px;
-    }
-
-    to{
-        left:30px;
-    }
-} */
 
 .hop {
     animation: hops 0.5s ease-in-out;
@@ -158,11 +148,11 @@ img {
         bottom: 0px;
     }
 
-    50% {
+    45% {
         bottom: 150px;
     }
 
-    55% {
+    65% {
         bottom: 150px;
     }
 
@@ -171,7 +161,7 @@ img {
     }
 }
 
-.character> img {
+.character > img {
     max-width: 5rem;
 }
 
@@ -183,7 +173,8 @@ img {
     z-index: 1;
     right: 0;
     bottom: 0;
-    animation: move-left 3s infinite linear;
+    max-width: 3rem;
+    animation: move-left 1s infinite linear;
 }
 
 @keyframes move-left {
@@ -194,20 +185,6 @@ img {
     to {
         transform: translateX(-100vw);
     }
-}
-
-.obstacles > img:nth-of-type(1) {
-    max-width: 2rem;
-    position: absolute;
-}
-
-.obstacles > img:nth-of-type(2) {
-    max-width: 3rem;
-    position: absolute;
-}
-
-.obstacles > img:nth-of-type(3) {
-    max-width: 3rem;
 }
 
 .result {
@@ -234,7 +211,7 @@ img {
     box-shadow: 0px 5px 39px rgba(0, 0, 0, 0.15);
     align-items: center;
     gap: 10px;
-    color: var(--brown);
+    color: var(--ash);
     overflow: hidden;
 }
 
@@ -244,7 +221,7 @@ img {
 }
 
 .score > span,
-.time>span {
+.time > span {
     height: 50px;
     line-height: 50px;
 }

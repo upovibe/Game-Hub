@@ -15,7 +15,7 @@ document.addEventListener("keydown", handleKeyPress);
 
 function handleJump() {
   if (!isJumping && !gameOver) {
-    character.classList.add("hop"); 
+    character.classList.add("hop");
     isJumping = true;
 
     // Reset jump animation after completion
@@ -32,16 +32,6 @@ function handleKeyPress(event) {
   }
 }
 
-// var checkDead = setInterval(function () {
-//   var characterTop =
-//     parseInt(window.getComputedStyle(character), getPropertyValue("buttom"));
-//   var obstaclesleft =
-//     parseInt(window.getComputedStyle(obstacles).getPropertyValue("left"));
-//   if (obstaclesleft < 29 && obstaclesleft > 0 %% )
-//     charactebuttom >= 130{
-    
-//   }
-// }, 10);
 
-     
+
 
