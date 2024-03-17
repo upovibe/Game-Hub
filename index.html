@@ -7,42 +7,51 @@
         <title>GameHub</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/> 
         <link rel="stylesheet" href="./index.css"> 
+        <link href="index.css" rel="stylesheet" type="text/css">
     </head>     
     <body> 
-        <h1>GAME HUB</h1> 
-        <main class="container"> 
-            <div class="slide"> 
-                <div class="item" style="background-image: url('media/snake.jpg');"> 
-                    <div class="content"> 
-                        <h2 class="name">Snake</h2> 
-                        <p class="des">Relive your Childhood and Enjoy The Classic Game of Snake.</p> <a href="#" class="play-btn">Play Now!</a> 
+        <main>
+            <h1>GAME HUB</h1>
+            <div class="wrapper">
+                <div class="image-slide"> 
+                    <div class="item" style="background-image: url('media/snake.jpg');"> 
+                        <div class="content"> 
+                            <h2 class="name">Snake</h2> 
+                            <p class="des">Relive your Childhood and Enjoy The Classic Game of Snake.</p> <a href="#" class="play-btn">Play Now!</a> 
+                        </div>
+                        <div data-empty-placeholder class="slider-view"></div>                         
+                    </div>
+                    <div class="item" style="background-image: url('media/rps.jpeg');"> 
+                        <div class="content"> 
+                            <h2 class="name">Rock,Paper,<br>Scissors </h2> 
+                            <p class="des">Enjoy the classic Game of Rock Paper Scissors now</p> <a href="Rock-Paper-Scissors/index.html" class="play-btn" target="_blank" rel="Rock Paper Scissors">Play Now!</a> 
+                        </div>
+                        <div data-empty-placeholder class="slider-view"></div>                         
                     </div>                     
-                </div>                 
-                <div class="item" style="background-image: url('media/rps.jpeg');"> 
-                    <div class="content"> 
-                        <h2 class="name">Rock,Paper,<br>Scissors </h2> 
-                        <p class="des">Enjoy the classic Game of Rock Paper Scissors now</p> <a href="Rock-Paper-Scissors/index.html" class="play-btn" target="_blank" rel="Rock Paper Scissors">Play Now!</a> 
-                    </div>                     
-                </div>                 
-                <div class="item" style="background-image: url('media/bouncing-ball.jpg');"> 
-                    <div class="content"> 
-                        <h2 class="name">Falling Ball Game</h2> 
-                        <p class="des">The Falling Ball game challenges players to maneuver a platform to catch falling balls while avoiding missed catches.</p> <a href="#" class="play-btn">Play Now!</a> 
-                    </div>                     
+                    <div class="item" style="background-image: url('media/bouncing-ball.jpg');"> 
+                        <div class="content"> 
+                            <h2 class="name">Falling Ball Game</h2> 
+                            <p class="des">The Falling Ball game challenges players to maneuver a platform to catch falling balls while avoiding missed catches.</p> <a href="#" class="play-btn">Play Now!</a> 
+                        </div>
+                        <div data-empty-placeholder class="slider-view"></div>                         
+                    </div>
+                    <div class="item" style="background-image: url('media/_92fbf321-6688-4940-a2e5-9d661d355197.jpeg');"> 
+                        <div class="content"> 
+                            <h2>Kangahops</h2> 
+                            <p>Help the kanagaroon escap from all cactus</p><a href="KangaHops/index.html" rel="Kangaroo Hops" target="_blank">Play Now!</a> 
+                        </div>
+                        <div data-empty-placeholder class="slider-view"></div>                         
+                    </div>
                 </div>
-                <div class="item" style="background-image: url('media/_92fbf321-6688-4940-a2e5-9d661d355197.jpeg');"> 
-                    <div class="content"> 
-                        <h2 class="name">Kangahops</h2> 
-                        <p class="des">Help the kanagaroon escap from all cactus</p><a href="KangaHops/index.html" class="play-btn" rel="Kangaroo Hops" target="_blank">Play Now!</a> 
-                    </div>                     
-                </div>                 
-            </div>             
-            <div class="btn-wrapper"> 
-                <button class="prev"> <i class="fa-solid fa-arrow-left"></i> 
-                </button>                 
-                <button class="next"> <i class="fa-solid fa-arrow-right"></i> 
-                </button>                 
+                <div class="btn-wrapper"> 
+                    <button class="prev"> <i class="fa-solid fa-arrow-left"></i> 
+                    </button>                     
+                    <button class="next"> <i class="fa-solid fa-arrow-right"></i> 
+                    </button>                     
+                </div>
             </div>
+            <div class="platform-access"><a href="https://www.bing.com/search?pglt=161&q=playstrore&cvid=a770b12466e54552a3c02cb09965c718&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQABhAMgYIAhAAGEAyBggDEAAYQDIGCAQQABhAMgYIBRAAGEAyBggGEAAYQDIGCAcQABhAMgYICBAAGEDSAQgyNzIyajBqMagCALACAA&FORM=ANNTA1&PC=U640" target="_blank" rel="playstore"><img src="media/playstore-svgrepo-com.svg" alt="playstore"></a><a href="https://www.bing.com/ck/a?!&&p=58301473e210f80cJmltdHM9MTcxMDYzMzYwMCZpZ3VpZD0wNGJkNWQ4Yi1lOWNjLTY2NWUtMGVjMi00ZTE5ZThkMTY3MzEmaW5zaWQ9NTE5Mw&ptn=3&ver=2&hsh=3&fclid=04bd5d8b-e9cc-665e-0ec2-4e19e8d16731&psq=app+store&u=a1aHR0cHM6Ly93d3cuYXBwbGUuY29tL2FwcC1zdG9yZS8&ntb=1" target="_blank" rel="apple store"><img src="media/app-store-svgrepo-com.svg" alt="apple store"></a>
+            </div>             
         </main>         
         <script src="index.js"></script>         
     </body>
