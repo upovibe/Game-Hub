@@ -60,6 +60,7 @@ main {
     position: relative;
     border-radius: 25px;
     overflow: hidden;
+    transition: all 0.3s ease-in-out;
 }
 
 .container {
@@ -148,6 +149,12 @@ main {
     top: 50%;
     transform: translateY(-50%);
     right: 2rem;
+    background-image: url('media/snake.jpg');
+    transition: transform 0.3s ease-in-out;
+    animation: preview;
+}
+
+@keyframes preview{
 }
 
 @keyframes animate {
