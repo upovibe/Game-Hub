@@ -1,104 +1,93 @@
-// let character = document.getElementById("character");
-// let obstacles = document.getElementById("obstacles");
-// let scoreSpan = document.getElementById("scorer");
-// let timerSpan = document.getElementById("timer");
-
-// let score = 0;
-// let isJumping = false;
-// let gameOver = false;
-// let gameTime = 0;
-// let intervalId;
-
-// // Event listeners
-// document.addEventListener("click", handleJump);
-// document.addEventListener("keydown", handleKeyPress);
-
-// function handleJump() {
-//   if (!isJumping && !gameOver) {
-//     character.classList.add("hop"); 
-//     isJumping = true;
-
-//     // Reset jump animation after completion
-//     setTimeout(() => {
-//       character.classList.remove("hop");
-//       isJumping = false;
-//     }, 500);
-//   }
-// }
-
-// function handleKeyPress(event) {
-//   if (event.code === "Space" && !isJumping && !gameOver) {
-//     handleJump();
-//   }
-//   }
-
-const character = document.getElementById('character');
-const obstacles = document.getElementById('obstacles');
-const scoreSpan = document.querySelector('.score span');
+// Variables to track game state
+let gameStarted = false;
+let gameOver = false;
 let score = 0;
-let isJumping = false;
+let time = 0;
+let timerInterval;
+let obstacleInterval;
 
-// Function to handle character jump animation
-function jump() {
-  if (!isJumping) {
-    isJumping = true;
-    character.classList.add('hop');
+// Audio setup
+const jumpSound = new Audio('media/jump.mp3');
+const collisionSound = new Audio('media/collision.mp3');
+
+// Function to handle character hops
+function hops() {
+    if (!gameStarted || gameOver) return;
+
+    jumpSound.play();
+    document.getElementById('character').classList.add('hop');
     setTimeout(() => {
-      isJumping = false;
-      character.classList.remove('hop');
-    }, 500); // Adjust the duration (in milliseconds) as needed
-  }
+        document.getElementById('character').classList.remove('hop');
+    }, 500);
+    score++; // Increment score on successful jump
+    document.getElementById('score').textContent = score;
 }
 
-// Event listeners for clicks and spacebar press
-document.addEventListener('click', jump);
-document.addEventListener('keydown', (event) => {
-  if (event.code === 'Space') {
-    jump();
-  }
+// Function to start the game
+function startGame() {
+    gameStarted = true;
+    document.getElementById('countdown').style.display = 'block';
+
+    let countdown = 3;
+    const countdownInterval = setInterval(() => {
+        document.getElementById('countdown').textContent = countdown;
+        countdown--;
+        if (countdown < 0) {
+            clearInterval(countdownInterval);
+            document.getElementById('countdown').style.display = 'none';
+            startTimer();
+            startObstacleMovement();
+        }
+    }, 1000);
+}
+
+// Function to start the timer
+function startTimer() {
+    timerInterval = setInterval(() => {
+        time++;
+        document.getElementById('timer').textContent = time;
+    }, 1000);
+}
+
+// Function to start moving obstacles
+function startObstacleMovement() {
+    obstacleInterval = setInterval(() => {
+        // Move obstacles
+        const obstacles = document.querySelectorAll('.obstacle');
+        obstacles.forEach((obstacle) => {
+            obstacle.style.left = parseInt(obstacle.style.left) - 10 + 'px';
+
+            // Check for collision
+            const character = document.getElementById('character');
+            const characterRect = character.getBoundingClientRect();
+            const obstacleRect = obstacle.getBoundingClientRect();
+
+            if (
+                characterRect.bottom >= obstacleRect.top &&
+                characterRect.top <= obstacleRect.bottom &&
+                characterRect.right >= obstacleRect.left &&
+                characterRect.left <= obstacleRect.right
+            ) {
+                handleCollision();
+            }
+        });
+    }, 50);
+}
+
+// Function to handle collision
+function handleCollision() {
+    clearInterval(timerInterval);
+    clearInterval(obstacleInterval);
+    gameOver = true;
+    collisionSound.play();
+    document.getElementById('playagain').style.display = 'block';
+}
+
+// Event listeners
+document.getElementById('character').addEventListener('click', hops);
+document.getElementById('playagain').addEventListener('click', () => {
+    location.reload(); // Reload the page to play again
 });
 
-// Function to move obstacles (replace with your desired movement logic)
-function moveObstacles() {
-  obstacles.style.transform = `translateX(-10px)`; // Adjust movement speed as needed
-  // Add logic to check if obstacles are off-screen and respawn them
-}
-
-// Function to update score
-function updateScore() {
-  score++;
-  scoreSpan.textContent = score;
-}
-
-// Game loop (replace with your preferred implementation)
-setInterval(() => {
-  if (!isJumping) {
-    updateScore(); // Update score every time the character isn't jumping
-  }
-  moveObstacles(); // Update obstacle position
-  // Add logic to check for collisions between character and obstacles
-}, 100); // Adjust the interval (in milliseconds) as needed
-
-// Potential Collision Detection (using bounding box overlap)
-// This is a basic example, you might want to refine it for better accuracy
-function checkCollision() {
-  const characterBox = character.getBoundingClientRect();
-  const obstacleBox = obstacles.firstChild.getBoundingClientRect(); // Assuming the first child is the obstacle
-
-  if (
-    characterBox.right < obstacleBox.left ||
-    characterBox.left > obstacleBox.right ||
-    characterBox.bottom < obstacleBox.top ||
-    characterBox.top > obstacleBox.bottom
-  ) {
-    // No collision
-  } else {
-    // Collision detected! Handle it here (e.g., end game, display message)
-    console.log("Collision!"); // Replace with your desired collision handling logic
-  }
-}
-
-// Add a check for collisions within the game loop or after each jump 
-// (uncomment the following line to enable collision check after each jump)
-// setInterval(checkCollision, 100); 
-S
+// Start the game when the page loads
+window.onload = startGame;
