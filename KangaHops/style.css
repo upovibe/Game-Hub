@@ -174,8 +174,7 @@ img {
     right: 0;
     bottom: 0;
     max-width: 3rem;
-
-    /* animation: move-left 1s infinite linear; */
+    animation: move-left 1s infinite linear;
 }
 
 @keyframes move-left {

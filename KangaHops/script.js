@@ -63,10 +63,10 @@ function startObstacleMovement() {
             const obstacleRect = obstacle.getBoundingClientRect();
 
             if (
-                characterRect.bottom >= obstacleRect.top &&
-                characterRect.top <= obstacleRect.bottom &&
-                characterRect.right >= obstacleRect.left &&
-                characterRect.left <= obstacleRect.right
+                characterRect.right > obstacleRect.left &&
+                characterRect.left < obstacleRect.right &&
+                characterRect.bottom > obstacleRect.top &&
+                characterRect.top < obstacleRect.bottom
             ) {
                 handleCollision();
             }
