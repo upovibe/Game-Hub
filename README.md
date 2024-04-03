@@ -24,9 +24,9 @@ Play the game [here](https://iamupo.github.io/FrontendMentor-Solutions/Rock-Pape
 
 ### KangaHops
 
-![Game Image](Kangahops/media/screenshot.jpeg)
+![Game Image](KangaHops/media/KangaHops.png)
 
-Play the game [here](https://iamupo.github.io/FrontendMentor-Solutions/KangaHops) View Code [here](https://github.com/iamupo/Game-Hub/tree/main/KangaHops)
+Play the game [here](https://iamupo.github.io/Game-Hub/KangaHops/) View Code [here](https://github.com/iamupo/Game-Hub/tree/main/KangaHops)
 
 ---
 
