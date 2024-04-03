@@ -16,9 +16,11 @@ Game-Hub is a project aimed at creating entertaining and engaging web games. Fro
 
 ### Rock Paper Scissors
 
-![Rock Paper Scissors](screenshots/rock-paper-scissors.png)
+![Rock Paper Scissors](Rock-Paper-Scissors/img/rock-paper-scissors.png)
 
-Play the game [here](link-to-rock-paper-scissors-game).
+Play the game [here](https://iamupo.github.io/FrontendMentor-Solutions/Rock-Paper-Scissors/)
+
+[Repo](https://github.com/iamupo/Game-Hub/tree/main/Rock-Paper-Scissors)
 
 ### [Game Title]
 
