@@ -18,21 +18,17 @@ Game-Hub is a project aimed at creating entertaining and engaging web games. Fro
 
 ![Rock Paper Scissors](Rock-Paper-Scissors/img/rock-paper-scissors.png)
 
-Play the game [here](https://iamupo.github.io/FrontendMentor-Solutions/Rock-Paper-Scissors/)
+Play the game [here](https://iamupo.github.io/FrontendMentor-Solutions/Rock-Paper-Scissors) View Code [here](https://github.com/iamupo/Game-Hub/tree/main/Rock-Paper-Scissors)
 
-[Repo](https://github.com/iamupo/Game-Hub/tree/main/Rock-Paper-Scissors)
+---
 
-### [Game Title]
+### KangaHops
 
-![Game Image](screenshots/game-image.png)
+![Game Image](Kangahops/media/screenshot.jpeg)
 
-Play the game [here](link-to-game).
+Play the game [here](https://iamupo.github.io/FrontendMentor-Solutions/KangaHops) View Code [here](https://github.com/iamupo/Game-Hub/tree/main/KangaHops)
 
-### [Another Game Title]
-
-![Another Game Image](screenshots/another-game-image.png)
-
-Play the game [here](link-to-another-game).
+---
 
 ## Development
 
