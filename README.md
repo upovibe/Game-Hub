@@ -40,9 +40,7 @@ We welcome contributions from the community! If you have ideas for new games or 
 
 ## Connect with Us
 
-- GitHub: [Game-Hub Repository](link-to-github)
-- LinkedIn: [Your LinkedIn Profile](link-to-linkedin)
-- Twitter: [Your Twitter Profile](link-to-twitter)
+- LinkedIn: [Your LinkedIn Profile](https://www.linkedin.com/in/iamupo/)
 
 Join us at Game-Hub and let's play together!
 
