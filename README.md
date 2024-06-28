@@ -18,7 +18,7 @@ Game-Hub is a project aimed at creating entertaining and engaging web games. Fro
 
 ![Rock Paper Scissors](Rock-Paper-Scissors/img/rock-paper-scissors.png)
 
-Play the game [here](https://iamupo.github.io/FrontendMentor-Solutions/Rock-Paper-Scissors) View Code [here](https://github.com/iamupo/Game-Hub/tree/main/Rock-Paper-Scissors)
+Play the game [here](https://upovibe.github.io/FrontendMentor-Solutions/Rock-Paper-Scissors) View Code [here](https://github.com/upovibe/Game-Hub/tree/main/Rock-Paper-Scissors)
 
 ---
 
@@ -26,21 +26,21 @@ Play the game [here](https://iamupo.github.io/FrontendMentor-Solutions/Rock-Pape
 
 ![Game Image](KangaHops/media/KangaHops.png)
 
-Play the game [here](https://iamupo.github.io/Game-Hub/KangaHops/) View Code [here](https://github.com/iamupo/Game-Hub/tree/main/KangaHops)
+Play the game [here](https://upovibe.github.io/Game-Hub/KangaHops/) View Code [here](https://github.com/upovibe/Game-Hub/tree/main/KangaHops)
 
 ---
 
 ## Development
 
-The games in Game-Hub are developed using modern web technologies to ensure smooth gameplay and an enjoyable user experience. We focus on responsive design, dynamic animations, and intuitive interfaces to make our games accessible to everyone.
+Game-Hub games are developed using modern web technologies to ensure smooth gameplay and an enjoyable user experience. We focus on responsive design, dynamic animations, and intuitive interfaces to make our games accessible to everyone.
 
 ## Contribution
 
-We welcome contributions from the community! If you have ideas for new games or improvements to existing ones, feel free to fork this repository, make your changes, and submit a pull request.
+We welcome contributions from the community! If you have ideas for new games or improvements to existing ones, please feel free to fix this repository, make changes, and submit a pull request.
 
 ## Connect with Us
 
-- LinkedIn: [Your LinkedIn Profile](https://www.linkedin.com/in/iamupo/)
+- LinkedIn [Your LinkedIn Profile](https://www.linkedin.com/in/upovibe/)
 
 Join us at Game-Hub and let's play together!
 
