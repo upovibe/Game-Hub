@@ -18,7 +18,7 @@ KangaHops is a classic arcade-style game where you control a kangaroo hopping th
 
 ## Play Now
 
-Play the game [here](https://iamupo.github.io/Game-Hub/KangaHops/) and hop your way to the top of the leaderboard!
+Play the game [here](https://upovibe.github.io/Game-Hub/KangaHops/) and hop your way to the top of the leaderboard!
 
 ## How to Play
 
@@ -36,6 +36,6 @@ We welcome contributions from the community! If you have ideas for new features 
 
 ## Connect with Us
 
-- LinkedIn: [Iamupo](https://www.linkedin.com/in/iamupo/)
+- LinkedIn: [Iamupo](https://www.linkedin.com/in/upovibe/)
 
 Hop into KangaHops and start jumping! 🚀
