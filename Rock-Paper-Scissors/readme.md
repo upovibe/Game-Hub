@@ -18,7 +18,7 @@ Rock Paper Scissors is a simple yet entertaining game where you compete against 
 
 ## Play Now
 
-Play the game [here](https://iamupo.github.io/Game-Hub/Rock-Paper-Scissors/) and test your luck and strategy!
+Play the game [here](https://upovibe.github.io/Game-Hub/Rock-Paper-Scissors/) and test your luck and strategy!
 
 ## How to Play
 
@@ -36,6 +36,6 @@ We welcome contributions from the community! If you have ideas for new features 
 
 ## Connect with Us
 
-- LinkedIn: [Iamupo](https://www.linkedin.com/in/iamupo/)
+- LinkedIn: [Iamupo](https://www.linkedin.com/in/upovibe/)
 
 Challenge the computer in Rock Paper Scissors and see who comes out on top! 💪🏻📄✂️
